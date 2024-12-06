@@ -5,7 +5,12 @@ public class contagem {
         Scanner scanner = new Scanner(System.in);
         System.out.println("digite números para os digitos serem contados");
         int number = scanner.nextInt();
-        String s = Integer.toString(number);
-        System.out.println(s.length());
+        if (number < 0){
+            String s = Integer.toString(number);
+            System.out.println(s.length() - 1);
+        } else {
+            String s = Integer.toString(number);
+            System.out.println(s.length());
+        }
     }
 }
