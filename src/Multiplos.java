@@ -4,18 +4,18 @@ public class Multiplos {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("digite um número e será mostardo todos os seus divisores");
+        System.out.println("digite um número e será mostardo todos os seus multiplos");
         int numero = scanner.nextInt();
-        multiplos(numero);
+        System.out.println("agora digite o limite dos multiplos");
+        int limite = scanner.nextInt();
+        multiplos(numero,limite);
     }
 
-    public static void multiplos(int a){
+    public static void multiplos(int a, int b){
         int resultado = 1;
-        int i = 1;
-        while(i <= a){
-            if(a % i == 0)
-                System.out.print(i +", ");
-            i++;
+        for (int i = 1; resultado < b; i++) {
+            resultado = a * i;
+            System.out.print(resultado + ", ");
         }
     }
 }
